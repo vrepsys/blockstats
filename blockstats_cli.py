@@ -24,6 +24,10 @@ def main():
         'command',
         help=COMMANDS_HELP, choices=['import', 'list-snapshots', 'remove-snapshot', 'get-stats'])
     parser.add_argument(
+        '--data-history',
+        help="data json to be merged with stats from the database when doing get-stats."
+    )
+    parser.add_argument(
         '--snapshot',
         help='snapshot id, required when removing a snapshot')
     parser.add_argument(
@@ -56,7 +60,7 @@ def main():
         mongodb.storage().force_remove_snapshot(args.snapshot)
     elif args.command == 'get-stats':
         stats = Stats(mongodb.stats_queries())
-        print(stats.get_all())
+        print(stats.get_all(args.data_history))
 
 if __name__ == "__main__":
     main()

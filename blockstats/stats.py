@@ -7,7 +7,13 @@ class Stats:
     def __init__(self, stats_queries):
         self._stats_queries = stats_queries
 
-    def get_all(self):
+    def get_all(self, data_history_file):
+
+        historical_stats = None
+        if data_history_file:
+            with open(data_history_file, 'r') as f:
+                historical_stats = json.load(f)
+
         q = self._stats_queries
         totals = q.get_total_address_counts()
         domain_counts = q.get_domain_counts()
@@ -31,6 +37,9 @@ class Stats:
                 'values': values
             })
 
+        if historical_stats:
+            domains_data.extend(historical_stats['domainsData'])
+
         domains_data.sort(key=lambda d: datetime.strptime(d['date'], '%Y-%m-%d'))
 
         latest_snapshot = q.get_latest_snapshot()
@@ -38,6 +47,15 @@ class Stats:
         top10_app_names = [app['name'] for app in top10_apps]
 
         apps_data = q.get_app_time_series(top10_app_names)
+
+        if historical_stats:
+            def leave_only_top10(item):
+                item['values'] = [app for app in item['values'] if app['name'] in top10_app_names]
+            for item in historical_stats['appsData']:
+                leave_only_top10(item)
+
+        apps_data.extend(historical_stats['appsData'])
+        apps_data.sort(key=lambda d: datetime.strptime(d['date'], '%Y-%m-%d'))
 
         all_stats = {'domainsData': domains_data, 'appsData': apps_data}
 
