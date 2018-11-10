@@ -1710,6 +1710,296 @@
                "count": 443
             }
          ]
+      },
+      {
+         "date": "2018-10-27",
+         "values": [
+            {
+               "name": "total_addresses",
+               "count": 89801
+            },
+            {
+               "name": "domains",
+               "count": 17472
+            },
+            {
+               "name": "subdomains",
+               "count": 72329
+            },
+            {
+               "name": "persons",
+               "count": 82111
+            },
+            {
+               "name": "total_installs",
+               "count": 10172
+            },
+            {
+               "name": "localhost_installs",
+               "count": 445
+            }
+         ]
+      },
+      {
+         "date": "2018-10-28",
+         "values": [
+            {
+               "name": "total_addresses",
+               "count": 89665
+            },
+            {
+               "name": "domains",
+               "count": 17278
+            },
+            {
+               "name": "subdomains",
+               "count": 72387
+            },
+            {
+               "name": "persons",
+               "count": 82102
+            },
+            {
+               "name": "total_installs",
+               "count": 10256
+            },
+            {
+               "name": "localhost_installs",
+               "count": 452
+            }
+         ]
+      },
+      {
+         "date": "2018-10-29",
+         "values": [
+            {
+               "name": "total_addresses",
+               "count": 89713
+            },
+            {
+               "name": "domains",
+               "count": 17254
+            },
+            {
+               "name": "subdomains",
+               "count": 72459
+            },
+            {
+               "name": "persons",
+               "count": 82164
+            },
+            {
+               "name": "total_installs",
+               "count": 10325
+            },
+            {
+               "name": "localhost_installs",
+               "count": 456
+            }
+         ]
+      },
+      {
+         "date": "2018-10-30",
+         "values": [
+            {
+               "name": "total_addresses",
+               "count": 89730
+            },
+            {
+               "name": "domains",
+               "count": 17220
+            },
+            {
+               "name": "subdomains",
+               "count": 72510
+            },
+            {
+               "name": "persons",
+               "count": 82193
+            },
+            {
+               "name": "total_installs",
+               "count": 10380
+            },
+            {
+               "name": "localhost_installs",
+               "count": 456
+            }
+         ]
+      },
+      {
+         "date": "2018-10-31",
+         "values": [
+            {
+               "name": "total_addresses",
+               "count": 89724
+            },
+            {
+               "name": "domains",
+               "count": 17156
+            },
+            {
+               "name": "subdomains",
+               "count": 72568
+            },
+            {
+               "name": "persons",
+               "count": 82233
+            },
+            {
+               "name": "total_installs",
+               "count": 10460
+            },
+            {
+               "name": "localhost_installs",
+               "count": 461
+            }
+         ]
+      },
+      {
+         "date": "2018-11-05",
+         "values": [
+            {
+               "name": "total_addresses",
+               "count": 89888
+            },
+            {
+               "name": "domains",
+               "count": 16956
+            },
+            {
+               "name": "subdomains",
+               "count": 72932
+            },
+            {
+               "name": "persons",
+               "count": 82604
+            },
+            {
+               "name": "total_installs",
+               "count": 10777
+            },
+            {
+               "name": "localhost_installs",
+               "count": 469
+            }
+         ]
+      },
+      {
+         "date": "2018-11-06",
+         "values": [
+            {
+               "name": "total_addresses",
+               "count": 89909
+            },
+            {
+               "name": "domains",
+               "count": 16920
+            },
+            {
+               "name": "subdomains",
+               "count": 72989
+            },
+            {
+               "name": "persons",
+               "count": 82651
+            },
+            {
+               "name": "total_installs",
+               "count": 10828
+            },
+            {
+               "name": "localhost_installs",
+               "count": 470
+            }
+         ]
+      },
+      {
+         "date": "2018-11-07",
+         "values": [
+            {
+               "name": "total_addresses",
+               "count": 89937
+            },
+            {
+               "name": "domains",
+               "count": 16903
+            },
+            {
+               "name": "subdomains",
+               "count": 73034
+            },
+            {
+               "name": "persons",
+               "count": 82690
+            },
+            {
+               "name": "total_installs",
+               "count": 10881
+            },
+            {
+               "name": "localhost_installs",
+               "count": 472
+            }
+         ]
+      },
+      {
+         "date": "2018-11-08",
+         "values": [
+            {
+               "name": "total_addresses",
+               "count": 89953
+            },
+            {
+               "name": "domains",
+               "count": 16848
+            },
+            {
+               "name": "subdomains",
+               "count": 73105
+            },
+            {
+               "name": "persons",
+               "count": 82740
+            },
+            {
+               "name": "total_installs",
+               "count": 10942
+            },
+            {
+               "name": "localhost_installs",
+               "count": 475
+            }
+         ]
+      },
+      {
+         "date": "2018-11-09",
+         "values": [
+            {
+               "name": "total_addresses",
+               "count": 90009
+            },
+            {
+               "name": "domains",
+               "count": 16794
+            },
+            {
+               "name": "subdomains",
+               "count": 73215
+            },
+            {
+               "name": "persons",
+               "count": 82835
+            },
+            {
+               "name": "total_installs",
+               "count": 11036
+            },
+            {
+               "name": "localhost_installs",
+               "count": 483
+            }
+         ]
       }
    ],
    "appsData": [
@@ -4191,44 +4481,44 @@
       {
          "values": [
             {
-               "name": "https://app.afari.io",
-               "count": 942
-            },
-            {
-               "name": "https://app.dappywallet.com",
-               "count": 267
-            },
-            {
-               "name": "https://testnet.misthos.io",
-               "count": 201
-            },
-            {
-               "name": "https://app.graphitedocs.com",
-               "count": 3184
-            },
-            {
-               "name": "https://chat.postly.co",
-               "count": 366
-            },
-            {
-               "name": "http://publik.ykliao.com",
-               "count": 116
-            },
-            {
-               "name": "https://www.stealthy.im",
-               "count": 2276
+               "name": "https://app.travelstack.club",
+               "count": 595
             },
             {
                "name": "https://app.misthos.io",
                "count": 383
             },
             {
+               "name": "http://publik.ykliao.com",
+               "count": 116
+            },
+            {
+               "name": "https://testnet.misthos.io",
+               "count": 201
+            },
+            {
                "name": "https://www.chat.hihermes.co",
                "count": 572
             },
             {
-               "name": "https://app.travelstack.club",
-               "count": 595
+               "name": "https://app.afari.io",
+               "count": 942
+            },
+            {
+               "name": "https://chat.postly.co",
+               "count": 366
+            },
+            {
+               "name": "https://app.graphitedocs.com",
+               "count": 3184
+            },
+            {
+               "name": "https://www.stealthy.im",
+               "count": 2276
+            },
+            {
+               "name": "https://app.dappywallet.com",
+               "count": 267
             }
          ],
          "date": "2018-10-23"
@@ -4236,44 +4526,44 @@
       {
          "values": [
             {
-               "name": "http://publik.ykliao.com",
-               "count": 117
-            },
-            {
-               "name": "https://app.afari.io",
-               "count": 962
-            },
-            {
-               "name": "https://www.chat.hihermes.co",
-               "count": 575
-            },
-            {
-               "name": "https://app.travelstack.club",
-               "count": 603
-            },
-            {
-               "name": "https://www.stealthy.im",
-               "count": 2278
-            },
-            {
-               "name": "https://app.misthos.io",
-               "count": 385
-            },
-            {
-               "name": "https://app.dappywallet.com",
-               "count": 270
-            },
-            {
-               "name": "https://app.graphitedocs.com",
-               "count": 3203
+               "name": "https://testnet.misthos.io",
+               "count": 201
             },
             {
                "name": "https://chat.postly.co",
                "count": 367
             },
             {
-               "name": "https://testnet.misthos.io",
-               "count": 201
+               "name": "https://app.graphitedocs.com",
+               "count": 3203
+            },
+            {
+               "name": "https://app.dappywallet.com",
+               "count": 270
+            },
+            {
+               "name": "https://app.misthos.io",
+               "count": 385
+            },
+            {
+               "name": "https://www.stealthy.im",
+               "count": 2278
+            },
+            {
+               "name": "https://app.travelstack.club",
+               "count": 603
+            },
+            {
+               "name": "https://www.chat.hihermes.co",
+               "count": 575
+            },
+            {
+               "name": "https://app.afari.io",
+               "count": 962
+            },
+            {
+               "name": "http://publik.ykliao.com",
+               "count": 117
             }
          ],
          "date": "2018-10-24"
@@ -4281,40 +4571,40 @@
       {
          "values": [
             {
-               "name": "https://testnet.misthos.io",
-               "count": 202
-            },
-            {
-               "name": "https://app.misthos.io",
-               "count": 390
-            },
-            {
-               "name": "https://app.afari.io",
-               "count": 978
-            },
-            {
-               "name": "https://chat.postly.co",
-               "count": 368
-            },
-            {
-               "name": "https://app.graphitedocs.com",
-               "count": 3222
+               "name": "https://www.chat.hihermes.co",
+               "count": 575
             },
             {
                "name": "https://www.stealthy.im",
                "count": 2284
             },
             {
-               "name": "https://www.chat.hihermes.co",
-               "count": 575
+               "name": "https://app.graphitedocs.com",
+               "count": 3222
+            },
+            {
+               "name": "https://chat.postly.co",
+               "count": 368
+            },
+            {
+               "name": "http://publik.ykliao.com",
+               "count": 117
+            },
+            {
+               "name": "https://app.afari.io",
+               "count": 978
+            },
+            {
+               "name": "https://testnet.misthos.io",
+               "count": 202
             },
             {
                "name": "https://app.travelstack.club",
                "count": 612
             },
             {
-               "name": "http://publik.ykliao.com",
-               "count": 117
+               "name": "https://app.misthos.io",
+               "count": 390
             },
             {
                "name": "https://app.dappywallet.com",
@@ -4326,47 +4616,497 @@
       {
          "values": [
             {
-               "name": "https://testnet.misthos.io",
-               "count": 202
-            },
-            {
-               "name": "https://app.afari.io",
-               "count": 984
-            },
-            {
-               "name": "https://app.dappywallet.com",
-               "count": 277
-            },
-            {
-               "name": "https://app.travelstack.club",
-               "count": 619
-            },
-            {
-               "name": "https://app.misthos.io",
-               "count": 390
-            },
-            {
-               "name": "http://publik.ykliao.com",
-               "count": 117
-            },
-            {
-               "name": "https://app.graphitedocs.com",
-               "count": 3238
+               "name": "https://www.chat.hihermes.co",
+               "count": 579
             },
             {
                "name": "https://www.stealthy.im",
                "count": 2290
             },
             {
-               "name": "https://www.chat.hihermes.co",
-               "count": 579
+               "name": "http://publik.ykliao.com",
+               "count": 117
+            },
+            {
+               "name": "https://app.misthos.io",
+               "count": 390
+            },
+            {
+               "name": "https://app.travelstack.club",
+               "count": 619
+            },
+            {
+               "name": "https://app.dappywallet.com",
+               "count": 277
+            },
+            {
+               "name": "https://app.afari.io",
+               "count": 984
             },
             {
                "name": "https://chat.postly.co",
                "count": 373
+            },
+            {
+               "name": "https://testnet.misthos.io",
+               "count": 202
+            },
+            {
+               "name": "https://app.graphitedocs.com",
+               "count": 3238
             }
          ],
          "date": "2018-10-26"
+      },
+      {
+         "values": [
+            {
+               "name": "https://chat.postly.co",
+               "count": 376
+            },
+            {
+               "name": "https://testnet.misthos.io",
+               "count": 202
+            },
+            {
+               "name": "https://app.misthos.io",
+               "count": 399
+            },
+            {
+               "name": "https://www.stealthy.im",
+               "count": 2301
+            },
+            {
+               "name": "https://app.travelstack.club",
+               "count": 629
+            },
+            {
+               "name": "https://app.afari.io",
+               "count": 995
+            },
+            {
+               "name": "http://publik.ykliao.com",
+               "count": 117
+            },
+            {
+               "name": "https://app.dappywallet.com",
+               "count": 279
+            },
+            {
+               "name": "https://app.graphitedocs.com",
+               "count": 3253
+            },
+            {
+               "name": "https://www.chat.hihermes.co",
+               "count": 586
+            }
+         ],
+         "date": "2018-10-27"
+      },
+      {
+         "values": [
+            {
+               "name": "https://www.chat.hihermes.co",
+               "count": 593
+            },
+            {
+               "name": "http://publik.ykliao.com",
+               "count": 117
+            },
+            {
+               "name": "https://chat.postly.co",
+               "count": 375
+            },
+            {
+               "name": "https://app.misthos.io",
+               "count": 409
+            },
+            {
+               "name": "https://app.graphitedocs.com",
+               "count": 3264
+            },
+            {
+               "name": "https://www.stealthy.im",
+               "count": 2310
+            },
+            {
+               "name": "https://app.travelstack.club",
+               "count": 634
+            },
+            {
+               "name": "https://app.afari.io",
+               "count": 1003
+            },
+            {
+               "name": "https://app.dappywallet.com",
+               "count": 279
+            },
+            {
+               "name": "https://testnet.misthos.io",
+               "count": 202
+            }
+         ],
+         "date": "2018-10-28"
+      },
+      {
+         "values": [
+            {
+               "name": "https://chat.postly.co",
+               "count": 378
+            },
+            {
+               "name": "https://testnet.misthos.io",
+               "count": 201
+            },
+            {
+               "name": "https://app.travelstack.club",
+               "count": 641
+            },
+            {
+               "name": "http://publik.ykliao.com",
+               "count": 118
+            },
+            {
+               "name": "https://app.graphitedocs.com",
+               "count": 3291
+            },
+            {
+               "name": "https://www.stealthy.im",
+               "count": 2321
+            },
+            {
+               "name": "https://app.misthos.io",
+               "count": 412
+            },
+            {
+               "name": "https://app.dappywallet.com",
+               "count": 280
+            },
+            {
+               "name": "https://www.chat.hihermes.co",
+               "count": 594
+            },
+            {
+               "name": "https://app.afari.io",
+               "count": 1018
+            }
+         ],
+         "date": "2018-10-29"
+      },
+      {
+         "values": [
+            {
+               "name": "https://testnet.misthos.io",
+               "count": 202
+            },
+            {
+               "name": "http://publik.ykliao.com",
+               "count": 118
+            },
+            {
+               "name": "https://chat.postly.co",
+               "count": 381
+            },
+            {
+               "name": "https://app.dappywallet.com",
+               "count": 281
+            },
+            {
+               "name": "https://app.afari.io",
+               "count": 1030
+            },
+            {
+               "name": "https://www.chat.hihermes.co",
+               "count": 597
+            },
+            {
+               "name": "https://app.travelstack.club",
+               "count": 647
+            },
+            {
+               "name": "https://app.graphitedocs.com",
+               "count": 3304
+            },
+            {
+               "name": "https://www.stealthy.im",
+               "count": 2323
+            },
+            {
+               "name": "https://app.misthos.io",
+               "count": 414
+            }
+         ],
+         "date": "2018-10-30"
+      },
+      {
+         "values": [
+            {
+               "name": "https://testnet.misthos.io",
+               "count": 202
+            },
+            {
+               "name": "http://publik.ykliao.com",
+               "count": 121
+            },
+            {
+               "name": "https://chat.postly.co",
+               "count": 385
+            },
+            {
+               "name": "https://app.dappywallet.com",
+               "count": 293
+            },
+            {
+               "name": "https://app.afari.io",
+               "count": 1044
+            },
+            {
+               "name": "https://www.chat.hihermes.co",
+               "count": 602
+            },
+            {
+               "name": "https://app.misthos.io",
+               "count": 417
+            },
+            {
+               "name": "https://www.stealthy.im",
+               "count": 2331
+            },
+            {
+               "name": "https://app.graphitedocs.com",
+               "count": 3322
+            },
+            {
+               "name": "https://app.travelstack.club",
+               "count": 660
+            }
+         ],
+         "date": "2018-10-31"
+      },
+      {
+         "values": [
+            {
+               "name": "http://publik.ykliao.com",
+               "count": 125
+            },
+            {
+               "name": "https://chat.postly.co",
+               "count": 394
+            },
+            {
+               "name": "https://app.afari.io",
+               "count": 1097
+            },
+            {
+               "name": "https://app.dappywallet.com",
+               "count": 306
+            },
+            {
+               "name": "https://www.chat.hihermes.co",
+               "count": 614
+            },
+            {
+               "name": "https://app.travelstack.club",
+               "count": 699
+            },
+            {
+               "name": "https://app.graphitedocs.com",
+               "count": 3428
+            },
+            {
+               "name": "https://app.misthos.io",
+               "count": 423
+            },
+            {
+               "name": "https://www.stealthy.im",
+               "count": 2350
+            },
+            {
+               "name": "https://testnet.misthos.io",
+               "count": 201
+            }
+         ],
+         "date": "2018-11-05"
+      },
+      {
+         "values": [
+            {
+               "name": "https://app.dappywallet.com",
+               "count": 308
+            },
+            {
+               "name": "http://publik.ykliao.com",
+               "count": 126
+            },
+            {
+               "name": "https://chat.postly.co",
+               "count": 396
+            },
+            {
+               "name": "https://www.chat.hihermes.co",
+               "count": 616
+            },
+            {
+               "name": "https://app.misthos.io",
+               "count": 423
+            },
+            {
+               "name": "https://www.stealthy.im",
+               "count": 2357
+            },
+            {
+               "name": "https://testnet.misthos.io",
+               "count": 201
+            },
+            {
+               "name": "https://app.afari.io",
+               "count": 1103
+            },
+            {
+               "name": "https://app.travelstack.club",
+               "count": 699
+            },
+            {
+               "name": "https://app.graphitedocs.com",
+               "count": 3441
+            }
+         ],
+         "date": "2018-11-06"
+      },
+      {
+         "values": [
+            {
+               "name": "https://app.afari.io",
+               "count": 1109
+            },
+            {
+               "name": "https://testnet.misthos.io",
+               "count": 201
+            },
+            {
+               "name": "http://publik.ykliao.com",
+               "count": 126
+            },
+            {
+               "name": "https://app.dappywallet.com",
+               "count": 309
+            },
+            {
+               "name": "https://www.chat.hihermes.co",
+               "count": 620
+            },
+            {
+               "name": "https://www.stealthy.im",
+               "count": 2362
+            },
+            {
+               "name": "https://chat.postly.co",
+               "count": 402
+            },
+            {
+               "name": "https://app.misthos.io",
+               "count": 424
+            },
+            {
+               "name": "https://app.graphitedocs.com",
+               "count": 3454
+            },
+            {
+               "name": "https://app.travelstack.club",
+               "count": 703
+            }
+         ],
+         "date": "2018-11-07"
+      },
+      {
+         "values": [
+            {
+               "name": "https://testnet.misthos.io",
+               "count": 201
+            },
+            {
+               "name": "http://publik.ykliao.com",
+               "count": 126
+            },
+            {
+               "name": "https://app.afari.io",
+               "count": 1112
+            },
+            {
+               "name": "https://www.chat.hihermes.co",
+               "count": 622
+            },
+            {
+               "name": "https://app.travelstack.club",
+               "count": 709
+            },
+            {
+               "name": "https://app.misthos.io",
+               "count": 426
+            },
+            {
+               "name": "https://app.graphitedocs.com",
+               "count": 3459
+            },
+            {
+               "name": "https://www.stealthy.im",
+               "count": 2394
+            },
+            {
+               "name": "https://app.dappywallet.com",
+               "count": 312
+            },
+            {
+               "name": "https://chat.postly.co",
+               "count": 404
+            }
+         ],
+         "date": "2018-11-08"
+      },
+      {
+         "values": [
+            {
+               "name": "http://publik.ykliao.com",
+               "count": 127
+            },
+            {
+               "name": "https://app.afari.io",
+               "count": 1120
+            },
+            {
+               "name": "https://www.chat.hihermes.co",
+               "count": 624
+            },
+            {
+               "name": "https://app.misthos.io",
+               "count": 433
+            },
+            {
+               "name": "https://app.graphitedocs.com",
+               "count": 3477
+            },
+            {
+               "name": "https://testnet.misthos.io",
+               "count": 200
+            },
+            {
+               "name": "https://www.stealthy.im",
+               "count": 2421
+            },
+            {
+               "name": "https://chat.postly.co",
+               "count": 409
+            },
+            {
+               "name": "https://app.dappywallet.com",
+               "count": 322
+            },
+            {
+               "name": "https://app.travelstack.club",
+               "count": 714
+            }
+         ],
+         "date": "2018-11-09"
       }
    ]
 }
