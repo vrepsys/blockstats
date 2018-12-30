@@ -1,9 +1,10 @@
 import sys
 import logging
+from datetime import datetime
 
 def setup():
     logging.basicConfig(
-        filename='blockstats.log',
+        filename='logs/blockstats.{:%Y-%m-%d}.log'.format(datetime.now()),
         level=logging.INFO,
         format='%(asctime)s:%(levelname)s %(message)s', datefmt='%Y/%m/%d %H:%M:%S')
 

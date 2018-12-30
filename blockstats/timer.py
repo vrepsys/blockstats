@@ -21,8 +21,10 @@ class Timer:
             total_elapsed = now - self._start_time
             avg = total_elapsed / self._done_jobs
             time_left = avg * (self._total_jobs-self._done_jobs)
-            logging.info('thread:%s %s/%s last: %.3fs avg: %.3fs left: %s',
-                         self._thread_id, self._done_jobs, self._total_jobs, self._last_took, avg, _format_interval(time_left))
+            long_duration = ' (LONG) ' if self._last_took > 2 else ' '
+            logging.info('thread:%s %s/%s last: %.3fs%savg: %.3fs left: %s',
+                         self._thread_id, self._done_jobs, self._total_jobs,
+                         self._last_took, long_duration, avg, _format_interval(time_left))
         else:
             logging.info('Starting with %s items', self._total_jobs)
 
