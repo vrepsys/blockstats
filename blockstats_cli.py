@@ -48,7 +48,7 @@ def main():
 
     args = parser.parse_args()
 
-    mongodb = Mongo(args.mongohost)
+    mongodb = Mongo(args.mongodb, args.mongohost)
     importer = BlockstatsImporter(args.blockstacknode, mongodb)
 
     if args.command == 'import':
