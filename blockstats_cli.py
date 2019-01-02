@@ -32,7 +32,7 @@ def main():
         help='snapshot id, required when removing a snapshot')
     parser.add_argument(
         '--mongohost',
-        help='network address of your mongo database (default: localhost)', default='localhost')
+        help='MongoDB URI (default: mongodb://localhost:27017/blockstats)', default='mongodb://localhost:27017/blockstats')
     parser.add_argument(
         '--mongodb',
         help='mongo database name (default: blockstats)', default='blockstats')

@@ -4,8 +4,8 @@ from blockstats.blockstats_dao import BlockstatsDao
 from blockstats.stats_queries import StatsQueries
 
 class Mongo:
-    def __init__(self, database, host='localhost'):
-        self._mongo_client = MongoClient(host=host)
+    def __init__(self, database, mongodb_uri='mongodb://localhost:27017/'):
+        self._mongo_client = MongoClient(mongodb_uri)
         setup_database(self._mongo_client[database])
         self._storage = BlockstatsDao(self._mongo_client[database])
         self._stats_queries = StatsQueries(self._mongo_client[database])
