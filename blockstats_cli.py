@@ -22,7 +22,7 @@ def main():
         description='blockstats')
     parser.add_argument(
         'command',
-        help=COMMANDS_HELP, choices=['import', 'list-snapshots', 'remove-snapshot', 'get-stats'])
+        help=COMMANDS_HELP, choices=['import', 'list-snapshots', 'remove-snapshot', 'get-stats', 'get-app-counts-csv'])
     parser.add_argument(
         '--data-history',
         help="data json to be merged with stats from the database when doing get-stats."
@@ -61,6 +61,10 @@ def main():
     elif args.command == 'get-stats':
         stats = Stats(mongodb.stats_queries())
         print(stats.get_all(args.data_history))
+    elif args.command == 'get-app-counts-csv':
+        stats = Stats(mongodb.stats_queries())
+        print(stats.get_app_counts_csv())
+
 
 if __name__ == "__main__":
     main()

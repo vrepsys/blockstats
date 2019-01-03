@@ -20,7 +20,7 @@ class StatsQueries:
             }
             },
             {'$match': {'_id': {'$not': bson.regex.Regex('localhost')}}},
-            {'$project': {'name': '$_id', 'count': 1}},
+            {'$project': {'_id' : 0, 'name': '$_id', 'count': 1}},
             {'$sort': {'count': -1}}
         ]))
 

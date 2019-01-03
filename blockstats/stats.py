@@ -1,6 +1,8 @@
 import json
+import csv
 from collections import defaultdict
 from datetime import datetime
+import io
 
 class Stats:
 
@@ -8,7 +10,6 @@ class Stats:
         self._stats_queries = stats_queries
 
     def get_all(self, data_history_file):
-
         historical_stats = None
         if data_history_file:
             with open(data_history_file, 'r') as f:
@@ -60,6 +61,21 @@ class Stats:
         all_stats = {'domainsData': domains_data, 'appsData': apps_data}
 
         return json.dumps(all_stats, indent=3)
+
+    def get_app_counts_csv(self):
+        q = self._stats_queries
+        latest_snapshot = q.get_latest_snapshot()
+        app_counts = q.get_app_counts(latest_snapshot['_id'])
+
+        csv_output = io.StringIO()
+        f = csv.writer(csv_output)
+        f.writerow(["date", "name", "count"])
+        snapshot_date = latest_snapshot['start'].strftime('%Y-%m-%d')
+        for c in app_counts:
+            f.writerow([snapshot_date, c["name"], c["count"]])
+
+        return csv_output.getvalue()
+
 
 def merge(values_dict, name, values_arr):
     for d in values_arr:
