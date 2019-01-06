@@ -12,6 +12,7 @@ import - imports data from a Blockstack node. Can take hours.
 list-snapshots - lists previous and unfinished imports
 remove-snapshot - removes a single import (a snapshot) and all its data. Requires --snapshot.
 get-stats - prints out statistical data in json format
+get-users-by-app - print all usernames that have a specified app intalled
 """.strip()
 
 def main():
@@ -22,11 +23,13 @@ def main():
         description='blockstats')
     parser.add_argument(
         'command',
-        help=COMMANDS_HELP, choices=['import', 'list-snapshots', 'remove-snapshot', 'get-stats', 'get-app-counts-csv'])
+        help=COMMANDS_HELP, choices=[
+            'import', 'list-snapshots', 'remove-snapshot',
+            'get-stats', 'get-app-counts-csv', 'get-users-by-app'
+        ])
     parser.add_argument(
         '--data-history',
-        help="data json to be merged with stats from the database when doing get-stats."
-    )
+        help="data json to be merged with stats from the database when doing get-stats.")
     parser.add_argument(
         '--snapshot',
         help='snapshot id, required when removing a snapshot')
@@ -45,6 +48,9 @@ def main():
     parser.add_argument(
         '--userprofiles_threads',
         help='Number of threads to use when downloading user profiles (default: 1)', default=1, type=int)
+    parser.add_argument(
+        '--app',
+        help='app name for serching usernames by app (default: https://dpage.io)', default='https://dpage.io')
 
     args = parser.parse_args()
 
@@ -64,6 +70,9 @@ def main():
     elif args.command == 'get-app-counts-csv':
         stats = Stats(mongodb.stats_queries())
         print(stats.get_app_counts_csv())
+    elif args.command == 'get-users-by-app':
+        stats = Stats(mongodb.stats_queries())
+        print(stats.get_users_by_app(args.app, args.snapshot))
 
 
 if __name__ == "__main__":

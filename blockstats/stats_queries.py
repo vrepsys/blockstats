@@ -10,6 +10,18 @@ class StatsQueries:
             {'$limit': 1}
         ]))[0]
 
+
+    def get_users_by_app(self, app_name, snapshot_id):
+        return list(self._db.app_installations.aggregate([
+            {'$match': {
+                '$and' : [
+                    {'snapshot_id': snapshot_id},
+                    {'apps' : {'$elemMatch': {'$eq': app_name}}}
+                ]}
+            },
+            {'$project': {'_id' : 0, 'username': 1}}
+        ]))
+
     def get_app_counts(self, snapshot_id):
         return list(self._db.app_installations.aggregate([
             {'$match': {'snapshot_id': snapshot_id}},

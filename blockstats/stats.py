@@ -9,6 +9,14 @@ class Stats:
     def __init__(self, stats_queries):
         self._stats_queries = stats_queries
 
+    def get_users_by_app(self, app_name, snapshot):
+        q = self._stats_queries
+        if snapshot is None:
+            snapshot = q.get_latest_snapshot()['_id']
+        users = q.get_users_by_app(app_name, snapshot)
+        users = [x['username'] for x in users]
+        return json.dumps(users, indent=3)
+
     def get_all(self, data_history_file):
         historical_stats = None
         if data_history_file:
