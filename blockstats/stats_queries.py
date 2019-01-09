@@ -59,6 +59,41 @@ class StatsQueries:
             *ADDRESS_COUNTS_AGGREGATIONS
         ]))
 
+    def get_all_apps_time_series(self):
+        return list(self._db.app_installations.aggregate([
+            {'$unwind': '$apps'},
+            {
+                '$group': {
+                    '_id': {
+                        'app': '$apps',
+                        'snapshot': '$snapshot_id'
+                    },
+                    'count': {'$sum': 1}
+                }
+            },
+            {'$match': {'_id.app': {'$not': bson.regex.Regex('localhost')}}},
+            {'$project': {'snapshot': '$_id.snapshot',
+                            'app.name': '$_id.app', 'app.count': '$count'}},
+            {'$group': {
+                '_id': {'snapshot': '$_id.snapshot'},
+                'apps': {'$push': '$app'}
+            }
+            },
+            {'$lookup': {
+                'from': 'snapshots',
+                'localField': '_id.snapshot',
+                'foreignField': '_id',
+                'as': 'snapshot'
+            }
+            },
+            {'$project': {'_id': 0, 'apps': 1, 'snapshot': {
+                '$arrayElemAt': ["$snapshot", 0]}}},
+            {'$project': {'values': '$apps', 'date': {'$dateToString': {
+                'format': '%Y-%m-%d', 'date': '$snapshot.start'}}}},
+            {'$sort': {'date': 1}}
+        ]))
+
+
     def get_app_time_series(self, apps):
         return list(self._db.app_installations.aggregate([
             {'$unwind': '$apps'},

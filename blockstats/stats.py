@@ -17,6 +17,19 @@ class Stats:
         users = [x['username'] for x in users]
         return json.dumps(users, indent=3)
 
+    def get_all_apps_time_series(self):
+        q = self._stats_queries
+        apps_by_date = q.get_all_apps_time_series()
+
+        csv_output = io.StringIO()
+        f = csv.writer(csv_output)
+        f.writerow(["date", "name", "count"])
+        for d in apps_by_date:
+            for app in d["values"]:
+                f.writerow([d["date"], app["name"], app["count"]])
+
+        return csv_output.getvalue()
+
     def get_all(self, data_history_file):
         historical_stats = None
         if data_history_file:

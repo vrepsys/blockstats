@@ -25,7 +25,7 @@ def main():
         'command',
         help=COMMANDS_HELP, choices=[
             'import', 'list-snapshots', 'remove-snapshot',
-            'get-stats', 'get-app-counts-csv', 'get-users-by-app'
+            'get-stats', 'get-app-counts-csv', 'get-historic-app-counts-csv', 'get-users-by-app'
         ])
     parser.add_argument(
         '--data-history',
@@ -73,6 +73,9 @@ def main():
     elif args.command == 'get-users-by-app':
         stats = Stats(mongodb.stats_queries())
         print(stats.get_users_by_app(args.app, args.snapshot))
+    elif args.command == 'get-historic-app-counts-csv':
+        stats = Stats(mongodb.stats_queries())
+        print(stats.get_all_apps_time_series())
 
 
 if __name__ == "__main__":
