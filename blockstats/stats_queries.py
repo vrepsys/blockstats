@@ -32,6 +32,7 @@ class StatsQueries:
             }
             },
             {'$match': {'_id': {'$not': bson.regex.Regex('localhost')}}},
+            {'$match': {'username': {'$not': bson.regex.Regex(r'\.blockusign1\.id')}}},
             {'$project': {'_id' : 0, 'name': '$_id', 'count': 1}},
             {'$sort': {'count': -1}}
         ]))
@@ -72,8 +73,9 @@ class StatsQueries:
                 }
             },
             {'$match': {'_id.app': {'$not': bson.regex.Regex('localhost')}}},
+            {'$match': {'username': {'$not': bson.regex.Regex(r'\.blockusign1\.id')}}},
             {'$project': {'snapshot': '$_id.snapshot',
-                            'app.name': '$_id.app', 'app.count': '$count'}},
+                          'app.name': '$_id.app', 'app.count': '$count'}},
             {'$group': {
                 '_id': {'snapshot': '$_id.snapshot'},
                 'apps': {'$push': '$app'}
@@ -107,6 +109,7 @@ class StatsQueries:
                 }
             },
             {'$match': {'_id': {'$not': bson.regex.Regex('localhost')}}},
+            {'$match': {'username': {'$not': bson.regex.Regex(r'\.blockusign1\.id')}}},
             {'$match': {'_id.app': {'$in': apps}}},
             {'$project': {'snapshot': '$_id.snapshot',
                           'app.name': '$_id.app', 'app.count': '$count'}},
@@ -133,6 +136,7 @@ class StatsQueries:
         return list(self._db.app_installations.aggregate([
             {'$unwind': '$apps'},
             {'$match': {'apps': {'$not': bson.regex.Regex('localhost')}}},
+            {'$match': {'username': {'$not': bson.regex.Regex(r'\.blockusign1\.id')}}},
             {'$group': {
                 '_id': {
                     'snapshot_id': '$snapshot_id'
