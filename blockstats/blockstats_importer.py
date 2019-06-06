@@ -73,12 +73,16 @@ class BlockstatsImporter:
         details = client.download_name_details(address)
         zonefile = None
         profile_url = None
+        expire_block = None
         if details:
             zonefile = details.get('zonefile')
+            expire_block = details.get('expire_block')
         if zonefile:
             profile_url = parser.extract_profile_url(zonefile)
         if profile_url:
             self.dao.update_profile_url(snapshot_id, address, profile_url)
+        if expire_block:
+            self.dao.update_expire_block(snapshot_id, address, expire_block)
 
     def import_app_installs_multithreaded(self, snapshot_id, threads=1):
         identities = self.dao.get_identities(snapshot_id)

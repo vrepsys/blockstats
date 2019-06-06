@@ -55,6 +55,15 @@ def test_update_profile_url(dao):
 
     assert dao.read_all_identities()[0].get('profile_url') == 'https://testurl.com'
 
+def test_update_expire_block(dao):
+    timestamp = datetime.datetime.utcnow()
+    identities = [{'address': '111.id', 'name': '111', 'namespace': 'id'}]
+
+    dao.save_identities(snapshot_id='1234', timestamp=timestamp, identities=identities)
+    dao.update_expire_block(snapshot_id='1234', address='111.id', expire_block=100)
+
+    assert dao.read_all_identities()[0].get('expire_block') == 100
+
 def test_update_is_person(dao):
     timestamp = datetime.datetime.utcnow()
     identities = [{'address': '111.id', 'name': '111', 'namespace': 'id'}]
