@@ -1,4 +1,5 @@
 import bson
+from bson import ObjectId
 
 class StatsQueries:
     def __init__(self, db):
@@ -27,14 +28,14 @@ class StatsQueries:
     def get_app_counts(self, snapshot_id):
         return list(self._db.app_installations.aggregate([
             {'$match': {'snapshot_id': snapshot_id}},
+            {'$match': {'username': {'$not': bson.regex.Regex(r'\.blockusign1\.id')}}},
             {'$unwind': '$apps'},
             {'$group': {
                 '_id': '$apps',
                 'count': {'$sum': 1}
-            }
+                }
             },
             {'$match': {'_id': {'$not': bson.regex.Regex('localhost')}}},
-            {'$match': {'username': {'$not': bson.regex.Regex(r'\.blockusign1\.id')}}},
             {'$project': {'_id' : 0, 'name': '$_id', 'count': 1}},
             {'$sort': {'count': -1}}
         ]))
@@ -64,6 +65,7 @@ class StatsQueries:
 
     def get_all_apps_time_series(self):
         return list(self._db.app_installations.aggregate([
+            {'$match': {'username': {'$not': bson.regex.Regex(r'\.blockusign1\.id')}}},
             {'$unwind': '$apps'},
             {
                 '$group': {
@@ -75,7 +77,6 @@ class StatsQueries:
                 }
             },
             {'$match': {'_id.app': {'$not': bson.regex.Regex('localhost')}}},
-            {'$match': {'username': {'$not': bson.regex.Regex(r'\.blockusign1\.id')}}},
             {'$project': {'snapshot': '$_id.snapshot',
                           'app.name': '$_id.app', 'app.count': '$count'}},
             {'$group': {
@@ -100,6 +101,7 @@ class StatsQueries:
 
     def get_app_time_series(self, apps):
         return list(self._db.app_installations.aggregate([
+            {'$match': {'username': {'$not': bson.regex.Regex(r'\.blockusign1\.id')}}},
             {'$unwind': '$apps'},
             {
                 '$group': {
@@ -111,7 +113,6 @@ class StatsQueries:
                 }
             },
             {'$match': {'_id': {'$not': bson.regex.Regex('localhost')}}},
-            {'$match': {'username': {'$not': bson.regex.Regex(r'\.blockusign1\.id')}}},
             {'$match': {'_id.app': {'$in': apps}}},
             {'$project': {'snapshot': '$_id.snapshot',
                           'app.name': '$_id.app', 'app.count': '$count'}},
