@@ -12,6 +12,8 @@ class StatsQueries:
 
 
     def get_users_by_app(self, app_name, snapshot_id):
+        if isinstance(snapshot_id, str):
+            snapshot_id = ObjectId(snapshot_id)
         return list(self._db.app_installations.aggregate([
             {'$match': {
                 '$and' : [
