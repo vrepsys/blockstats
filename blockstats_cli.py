@@ -59,11 +59,16 @@ def main():
 
     if args.command == 'import':
         blockstats_logging.write_stdouts_to_log()
-        importer.import_all_multithreaded(args.userdetails_threads, args.userprofiles_threads)
+        importer.import_all_multithreaded(args.userdetails_threads, args.userprofiles_threads)    
+    if args.command == 'import-app-installs' and args.snapshot:
+        blockstats_logging.write_stdouts_to_log()
+        importer.import_app_installs_multithreaded(args.snapshot, args.userprofiles_threads)
     elif args.command == 'list-snapshots':
         snapshots_printer.print_snapshots(mongodb.storage().get_all_snapshots())
     elif args.command == 'remove-snapshot' and args.snapshot:
-        mongodb.storage().force_remove_snapshot(args.snapshot)
+        mongodb.storage().force_remove_snapshot(args.snapshot)    
+    elif args.command == 'remove-app-installs' and args.snapshot:
+        mongodb.storage().remove_app_installs(args.snapshot)
     elif args.command == 'get-stats':
         stats = Stats(mongodb.stats_queries())
         print(stats.get_all(args.data_history))
