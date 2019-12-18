@@ -64,3 +64,8 @@ class BlockstatsDao:
         self._db.snapshots.delete_one({'_id': snapshot_id})
         self._db.identities.delete_many({'snapshot_id': snapshot_id})
         self._db.app_installations.delete_many({'snapshot_id': snapshot_id})
+
+    def remove_app_installs(self, snapshot_id):
+        if isinstance(snapshot_id, str):
+            snapshot_id = ObjectId(snapshot_id)
+        self._db.app_installations.delete_many({'snapshot_id': snapshot_id})
