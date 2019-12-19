@@ -81,6 +81,8 @@ class BlockstatsImporter:
             self.dao.update_profile_url(snapshot_id, address, profile_url)
 
     def import_app_installs_multithreaded(self, snapshot_id, threads=1):
+        if isinstance(snapshot_id, str):
+            snapshot_id = ObjectId(snapshot_id)
         identities = self.dao.get_identities(snapshot_id)
         identity_batches = _batchify_by_address(identities, threads)
         pool = ThreadPoolExecutor(threads)
