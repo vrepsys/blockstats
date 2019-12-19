@@ -6,6 +6,7 @@ from blockstats.blockstack_client import BlockstackClient
 from blockstats import parser
 from blockstats import downloader
 from blockstats.timer import Timer
+from bson import ObjectId
 
 
 class BlockstatsImporter:
