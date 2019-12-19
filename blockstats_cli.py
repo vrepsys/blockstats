@@ -24,7 +24,7 @@ def main():
     parser.add_argument(
         'command',
         help=COMMANDS_HELP, choices=[
-            'import', 'list-snapshots', 'remove-snapshot',
+            'import', 'list-snapshots', 'remove-snapshot', 'remove-app-installs', 'import-app-installs',
             'get-stats', 'get-app-counts-csv', 'get-historic-app-counts-csv', 'get-users-by-app'
         ])
     parser.add_argument(
