@@ -31,6 +31,11 @@ class BlockstatsDao:
             {'snapshot_id': snapshot_id, 'address': address},
             {"$set": {"profile_url": profile_url}})
 
+    def update_expire_block(self, snapshot_id, address, expire_block):
+        self._db.identities.find_one_and_update(
+            {'snapshot_id': snapshot_id, 'address': address},
+            {"$set": {"expire_block": expire_block}})
+
     def update_is_person(self, snapshot_id, address, is_person):
         self._db.identities.find_one_and_update(
             {'snapshot_id': snapshot_id, 'address': address}, {"$set": {"is_person": is_person}})
